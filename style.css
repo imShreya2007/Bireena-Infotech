@@ -771,7 +771,7 @@ nav{
 }
 
 
-/* Resume */
+/* -----Resume----- */
 .resume-card {
   background: linear-gradient(135deg, var(--card) 0%, rgba(124,106,255,.08) 100%);
   border: 1px solid rgba(124,106,255,.25);
@@ -800,4 +800,95 @@ nav{
   gap: 1rem; 
   flex-wrap: wrap; 
 }
+
+/* -----Contact------ */
+.contact-layout { 
+  display: grid; 
+  grid-template-columns: 1.1fr 1fr; 
+  gap: 3.5rem; 
+  align-items: start; 
+}
+.contact-intro { 
+  font-size: .92rem; 
+  line-height: 1.9; 
+  color: var(--muted); 
+  margin-bottom: 1.4rem;
+}
+.contact-links { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 0.7rem; 
+}
+.contact-item {
+  display: flex; 
+  align-items: center; 
+  gap: 1rem;
+  padding: 0.9rem 1.2rem; 
+  border-radius: 8px;
+  background: var(--card); 
+  border: 1px solid var(--border);
+  text-decoration: none; 
+  transition: all .25s;
+}
+.contact-item:hover { border-color: var(--accent); 
+  transform: translateX(5px); 
+}
+.cico {
+  width: 34px; 
+  height: 34px; 
+  border-radius: 8px;
+  background: rgba(124,106,255,.12);
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  font-size: .9rem; 
+  flex-shrink: 0;
+}
+
+.cico img {
+  width: 20px; 
+  height: 20px;
+}
+.clabel { 
+  font-size: .63rem; 
+  letter-spacing: .12em; 
+  text-transform: uppercase; 
+  color: var(--muted); 
+}
+.cval { 
+  font-size: .83rem; 
+  color: var(--text); 
+  margin-top: .08rem; 
+}
+
+
+/* ------Footer------ */
+footer {
+  position: relative; 
+  z-index: 1;
+  background: rgba(10,10,15,.92);
+  border-top: 1px solid var(--border);
+  padding: 2.2rem 5rem;
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+  flex-wrap: wrap; 
+  gap: 1rem;
+  font-size: .74rem; 
+  color: var(--muted);
+}
+
+/* links */
+.footer-links { display: flex; 
+  gap: 1.8rem; 
+  list-style: none; 
+  flex-wrap: wrap; 
+}
+.footer-links a { 
+  color: var(--muted); 
+  text-decoration: none; 
+  letter-spacing: .06em; 
+  transition: color .2s; 
+}
+.footer-links a:hover { color: var(--accent); }
 
