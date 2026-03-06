@@ -1,5 +1,5 @@
 /* -----Reset & Variables----- */
-*, *::before, *::after{
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -26,16 +26,15 @@
   --nav-h:   68px; /*navbar height*/
 }
 
-html{
+html {
   scroll-behavior: smooth;
-
 }
 
-body{
+body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-m);
-  /* overflow: hidden; */
+  overflow-x: hidden;
 }
 
 
@@ -64,7 +63,7 @@ nav{
   align-items: center; 
   justify-content: space-between;
   padding: 0 5rem;
-  background: rgba(10,10,15,.92);
+  background: rgba(10,10,15,0.92);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
 }
@@ -78,7 +77,7 @@ nav{
   background-clip: text; 
   -webkit-background-clip: text; 
   -webkit-text-fill-color: transparent;
-  letter-spacing: .02em; 
+  letter-spacing: 0.02em; 
   z-index: 201;
   text-decoration: none;
 }
@@ -92,7 +91,7 @@ nav{
   flex-direction: column; 
   gap: 5px;
   cursor: pointer; 
-  padding: .5rem; 
+  padding: 0.5rem; 
   z-index: 201;
   position: relative;
 }
@@ -102,7 +101,7 @@ nav{
   height: 2px;
   background: var(--text); 
   border-radius: 2px;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   transform-origin: center;
 }
 
@@ -127,10 +126,10 @@ nav{
 .nav-links a {
   color: var(--muted);
   text-decoration: none;
-  font-size: .73rem; 
-  letter-spacing: .12em; 
+  font-size: 0.73rem; 
+  letter-spacing: 0.12em; 
   text-transform: uppercase;
-  transition: color .2s;
+  transition: color 0.2s;
   position: relative; 
   padding-bottom: 3px;
 }
@@ -141,22 +140,22 @@ nav{
   width: 0; 
   height: 1px; 
   background: var(--accent);
-  transition: width .25s ease;
+  transition: width 0.25s ease;
 }
 .nav-links a:hover        { color: var(--accent); }
 .nav-links a:hover::after { width: 100%; }
 
 /* nav-btn */
 .nav-btn {
-  padding: .42rem 1.1rem;
+  padding: 0.42rem 1.1rem;
   border: 1px solid var(--accent) !important;
   color: var(--accent) !important;
   border-radius: 4px;
-  transition: background .2s, box-shadow .2s;
+  transition: background 0.2s, box-shadow 0.2s;
 }
 .nav-btn:hover {
-  background: rgba(124,106,255,.15) !important;
-  box-shadow: 0 0 16px rgba(124,106,255,.3);
+  background: rgba(124,106,255,0.15) !important;
+  box-shadow: 0 0 16px rgba(124,106,255,0.3);
 }
 .nav-btn::after { display: none !important; }
 
@@ -179,12 +178,12 @@ nav{
 .section-tag {
   display: flex; 
   align-items: center; 
-  gap: .9rem;
-  font-size: .68rem; 
-  letter-spacing: .2em;
+  gap: 0.9rem;
+  font-size: 0.68rem; 
+  letter-spacing: 0.2em;
   text-transform: uppercase; 
   color: var(--accent);
-  margin-bottom: .75rem;
+  margin-bottom: 0.75rem;
 }
 .section-tag::after {
   content: ''; 
@@ -192,14 +191,14 @@ nav{
   max-width: 50px;
   height: 1px; 
   background: var(--accent); 
-  opacity: .4;
+  opacity: 0.4;
 }
 .section-title {
   font-family: var(--font-d);
   font-size: clamp(1.8rem, 3.5vw, 2.8rem);
   font-weight: 800; 
   margin-bottom: 2.8rem;
-  letter-spacing: -.02em;
+  letter-spacing: 0.02em;
 }
 
 
@@ -224,7 +223,7 @@ nav{
   font-size: clamp(1.5rem, 2.5vw, 2rem);
   font-weight: 800; 
   line-height: 1.2; 
-  letter-spacing: .02em;
+  letter-spacing: 0.02em;
 }
 .about-headline em { 
   color: var(--accent); 
@@ -233,7 +232,7 @@ nav{
 
 /* bio */
 .about-bio { 
-  font-size: .92rem; 
+  font-size: 0.92rem; 
   line-height: 1.95; 
   color: var(--muted); 
 }
@@ -246,19 +245,19 @@ nav{
 .about-meta { 
   display: flex; 
   flex-wrap: wrap; 
-  gap: .8rem; 
+  gap: 0.8rem; 
 }
 .meta-pill {
   display: flex; 
   align-items: center; 
-  gap: .5rem;
+  gap: 0.5rem;
   background: var(--card); 
   border: 1px solid var(--border);
-  padding: .45rem 1rem; 
+  padding: 0.45rem 1rem; 
   border-radius: 6px;
-  font-size: .76rem; 
+  font-size: 0.76rem; 
   color: var(--text);
-  transition: border-color .2s;
+  transition: border-color 0.2s;
 }
 .meta-pill:hover { 
   border-color: var(--accent); 
@@ -276,7 +275,7 @@ nav{
   border-radius: 10px; 
   padding: 1.5rem; 
   text-align: center;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 .stat-box:hover { 
   border-color: var(--accent); 
@@ -292,10 +291,10 @@ nav{
   -webkit-text-fill-color: transparent;
 }
 .stat-lbl { 
-  font-size: .72rem; 
+  font-size: 0.72rem; 
   color: var(--muted); 
-  margin-top: .3rem; 
-  letter-spacing: .08em; 
+  margin-top: 0.3rem; 
+  letter-spacing: 0.08em; 
 }
 
 
@@ -308,7 +307,7 @@ nav{
   display: flex; 
   gap: 1.5rem; 
   align-items: flex-start;
-  transition: border-color .3s, transform .3s;
+  transition: border-color 0.3s, transform 0.3s;
   position: relative; 
   overflow: hidden;
 }
@@ -340,31 +339,36 @@ nav{
 .exp-role    { 
   font-family: var(--font-d); 
   font-size: 1.05rem; 
-  font-weight: 700; }
-.exp-company { color: var(--accent); 
-  font-size: .83rem; 
-  margin-top: .25rem; }
-.exp-date    { font-size: .72rem; 
+  font-weight: 700; 
+}
+.exp-company { 
+  color: var(--accent); 
+  font-size: 0.83rem; 
+  margin-top: 0.25rem; 
+}
+.exp-date    { 
+  font-size: 0.72rem; 
   color: var(--muted); 
-  margin-top: .15rem; 
-  letter-spacing: .06em; }
+  margin-top: 0.15rem; 
+  letter-spacing: 0.06em; 
+}
 .exp-badge {
   display: inline-block; 
-  margin-top: .6rem;
-  padding: .25rem .7rem; 
+  margin-top: 0.6rem;
+  padding: 0.25rem 0.7rem; 
   border-radius: 100px;
   background: rgba(106,255,222,.1); 
   border: 1px solid rgba(106,255,222,.2);
   color: var(--accent3); 
-  font-size: .68rem; 
-  letter-spacing: .1em; 
+  font-size: 0.68rem; 
+  letter-spacing: 0.1em; 
   text-transform: uppercase;
 }
 
 /* description */
 .exp-desc { 
   margin-top: 1rem; 
-  font-size: .84rem; 
+  font-size: 0.84rem; 
   line-height: 1.75; 
   color: var(--muted); 
 }
@@ -386,7 +390,7 @@ nav{
   display: flex; 
   gap: 1.5rem; 
   align-items: flex-start; 
-  transition: all .3s;
+  transition: all 0.3s;
 }
 .edu-card:hover { 
   border-color: var(--accent3); 
@@ -420,11 +424,149 @@ nav{
 }
 .edu-degree { 
   color: var(--accent3); 
-  font-size: .82rem; 
-  margin-top: .2rem; 
+  font-size: 0.82rem; 
+  margin-top: 0.2rem; 
 }
 .edu-period { 
   color: var(--muted); 
-  font-size: .76rem; 
-  margin-top: .15rem; 
+  font-size: 0.76rem; 
+  margin-top: 0.15rem; 
+}
+
+
+/* -----SKILLS----- */
+.skills-layout { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 2rem; 
+}
+
+/* Technical Skills */
+.skill-card {
+  background: var(--card); 
+  border: 1px solid var(--border);
+  border-radius: 12px; 
+  padding: 2rem;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.skill-card:hover { 
+  border-color: var(--accent); 
+}
+
+/* Skill Header */
+.skill-card-head {
+  font-family: var(--font-d); 
+  font-size: 0.78rem; 
+  font-weight: 600;
+  letter-spacing: 0.14em; 
+  text-transform: uppercase; 
+  color: var(--accent);
+  margin-bottom: 1.4rem; 
+  display: flex; 
+  align-items: center; 
+  gap: 0.6rem;
+}
+.skill-card-head::before {
+  content: ''; 
+  width: 6px; 
+  height: 6px; 
+  border-radius: 50%; 
+  background: var(--accent);
+}
+
+/* Skill Bars */
+.skill-bar-wrap { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 1.1rem; 
+}
+.skill-bar-top  { 
+  display: flex; 
+  justify-content: space-between; 
+  margin-bottom: 0.4rem; 
+}
+.skill-bar-name { 
+  font-size: 0.8rem; 
+  color: var(--text); 
+}
+.skill-bar-pct  { 
+  font-size: 0.72rem; 
+  color: var(--muted); 
+}
+.skill-bar-track {
+  height: 5px; 
+  background: var(--border); 
+  border-radius: 3px; 
+  overflow: hidden;
+}
+.skill-bar-fill {
+  height: 100%; 
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  width: var(--w);          
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: barFill 0.9s ease forwards;
+  animation-timeline: view();
+  animation-range: entry 5% entry 40%;
+}
+@keyframes barFill {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+/* Tech-Tag */
+.tools-label {
+  font-size: 0.68rem; 
+  letter-spacing: 0.12em; 
+  text-transform: uppercase;
+  color: var(--muted); 
+  margin: 1.4rem 0 0.8rem;
+}
+.tech-grid { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 0.6rem; 
+}
+.tech-tag {
+  padding: 0.4rem 0.9rem; 
+  border-radius: 4px;
+  background: rgba(124,106,255,.1); 
+  border: 1px solid rgba(124,106,255,.18);
+  font-size: 0.78rem; 
+  color: var(--text); 
+  letter-spacing: 0.05em;
+  transition: all 0.2s; 
+  cursor: default;
+}
+.tech-tag:hover {
+  background: rgba(124,106,255,.22); 
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+/* Soft Skills */
+.soft-list { 
+  display: flex; 
+  flex-direction: column; 
+}
+
+/* list */
+.soft-item {
+  display: flex; 
+  align-items: flex-start; 
+  gap: 0.8rem;
+  padding: 0.7rem 0; 
+  border-bottom: 1px solid var(--border);
+  font-size: 0.83rem; 
+  line-height: 1.65; 
+  color: var(--muted);
+}
+.soft-item:last-child { border-bottom: none; }
+.soft-item::before {
+  content: '◆'; 
+  color: var(--accent2); 
+  font-size: 0.45rem;
+  margin-top: 0.52rem; 
+  flex-shrink: 0;
 }
