@@ -369,3 +369,62 @@ nav{
   color: var(--muted); 
 }
 
+
+/* -----Education----- */
+.edu-list { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 1.2rem; 
+}
+
+/* card */
+.edu-card {
+  background: var(--card); 
+  border: 1px solid var(--border);
+  border-radius: 12px; 
+  padding: 1.8rem;
+  display: flex; 
+  gap: 1.5rem; 
+  align-items: flex-start; 
+  transition: all .3s;
+}
+.edu-card:hover { 
+  border-color: var(--accent3); 
+}
+
+/* icons */
+.edu-icon {
+  width: 46px; 
+  height: 46px; 
+  border-radius: 12px;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  font-size: 1.2rem; 
+  flex-shrink: 0;
+}
+.edu-icon.uni    { 
+  background: rgba(106,255,222,.1); 
+  border: 1px solid rgba(106,255,222,.2); 
+}
+.edu-icon.school { 
+  background: rgba(255,184,106,.1); 
+  border: 1px solid rgba(255,184,106,.2); 
+}
+
+/* data */
+.edu-name   { 
+  font-family: var(--font-d); 
+  font-size: 1rem; 
+  font-weight: 700; 
+}
+.edu-degree { 
+  color: var(--accent3); 
+  font-size: .82rem; 
+  margin-top: .2rem; 
+}
+.edu-period { 
+  color: var(--muted); 
+  font-size: .76rem; 
+  margin-top: .15rem; 
+}
