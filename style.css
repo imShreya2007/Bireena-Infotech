@@ -1,4 +1,4 @@
-/* Reset & Variables */
+/* -----Reset & Variables----- */
 *, *::before, *::after{
   margin: 0;
   padding: 0;
@@ -35,12 +35,12 @@ body{
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-m);
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 
 
-/* grid background */
+/* -----Grid Background----- */
 body::before{
   content:'';
   position: fixed;
@@ -54,7 +54,7 @@ body::before{
 
 
 
-/* Navigation */
+/* -----Navigation----- */
 nav{
   position: fixed; 
   top: 0; left: 0; right: 0;
@@ -69,6 +69,7 @@ nav{
   border-bottom: 1px solid var(--border);
 }
 
+/* Personal Logo */
 .nav-logo {
   font-family: var(--font-d);
   font-size: 1.2rem; 
@@ -85,6 +86,7 @@ nav{
 /* Hide checkbox */
 #nav-toggle { display: none; }
 
+/* hamburger */
 .nav-hamburger {
   display: none;
   flex-direction: column; 
@@ -115,13 +117,13 @@ nav{
   transform: translateY(-7px) rotate(-45deg);
 }
 
+/* nav-links */
 .nav-links {
   display: flex; 
   gap: 2.4rem;
   list-style: none; 
   align-items: center;
 }
-
 .nav-links a {
   color: var(--muted);
   text-decoration: none;
@@ -132,7 +134,6 @@ nav{
   position: relative; 
   padding-bottom: 3px;
 }
-
 .nav-links a::after {
   content: '';
   position: absolute; 
@@ -145,6 +146,7 @@ nav{
 .nav-links a:hover        { color: var(--accent); }
 .nav-links a:hover::after { width: 100%; }
 
+/* nav-btn */
 .nav-btn {
   padding: .42rem 1.1rem;
   border: 1px solid var(--accent) !important;
@@ -160,14 +162,13 @@ nav{
 
 
 
-/* Shared utilities among all sections*/
+/* -----Shared utilities among all sections-----*/
 .divider {
   height: 1px; 
   background: var(--border);
   max-width: 1240px; 
   margin: 0 auto;
 }
-
 .section-wrap {
   padding: 6rem 5rem;
   max-width: 1240px; 
@@ -175,7 +176,6 @@ nav{
   position: relative; 
   z-index: 1;
 }
-
 .section-tag {
   display: flex; 
   align-items: center; 
@@ -194,7 +194,6 @@ nav{
   background: var(--accent); 
   opacity: .4;
 }
-
 .section-title {
   font-family: var(--font-d);
   font-size: clamp(1.8rem, 3.5vw, 2.8rem);
@@ -205,7 +204,7 @@ nav{
 
 
 
-/* About*/
+/* -----About-----*/
 .about-layout {
   display: grid; 
   grid-template-columns: 1.5fr 1fr;
@@ -213,7 +212,6 @@ nav{
   align-items: start; 
   margin-bottom: 3.5rem;
 }
-
 .about-text {
   display: flex; 
   flex-direction: column; 
@@ -299,3 +297,75 @@ nav{
   margin-top: .3rem; 
   letter-spacing: .08em; 
 }
+
+
+/* -----Experience----- */
+.exp-card {
+  background: var(--card); 
+  border: 1px solid var(--border);
+  border-radius: 12px; 
+  padding: 2rem;
+  display: flex; 
+  gap: 1.5rem; 
+  align-items: flex-start;
+  transition: border-color .3s, transform .3s;
+  position: relative; 
+  overflow: hidden;
+}
+.exp-card::after {
+  content: ''; 
+  position: absolute; 
+  left: 0; top: 0; bottom: 0; 
+  width: 3px;
+  background: linear-gradient(to bottom, var(--accent), var(--accent2));
+}
+.exp-card:hover { 
+  border-color: rgba(124,106,255,.4); 
+}
+
+/* icon */
+.exp-icon {
+  width: 48px; height: 48px; 
+  border-radius: 12px;
+  background: rgba(124,106,255,.12); 
+  border: 1px solid rgba(124,106,255,.2);
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  font-size: 1.3rem; 
+  flex-shrink: 0;
+}
+
+/* data */
+.exp-role    { 
+  font-family: var(--font-d); 
+  font-size: 1.05rem; 
+  font-weight: 700; }
+.exp-company { color: var(--accent); 
+  font-size: .83rem; 
+  margin-top: .25rem; }
+.exp-date    { font-size: .72rem; 
+  color: var(--muted); 
+  margin-top: .15rem; 
+  letter-spacing: .06em; }
+.exp-badge {
+  display: inline-block; 
+  margin-top: .6rem;
+  padding: .25rem .7rem; 
+  border-radius: 100px;
+  background: rgba(106,255,222,.1); 
+  border: 1px solid rgba(106,255,222,.2);
+  color: var(--accent3); 
+  font-size: .68rem; 
+  letter-spacing: .1em; 
+  text-transform: uppercase;
+}
+
+/* description */
+.exp-desc { 
+  margin-top: 1rem; 
+  font-size: .84rem; 
+  line-height: 1.75; 
+  color: var(--muted); 
+}
+
