@@ -1190,7 +1190,8 @@ footer {
 .footer-links a:hover { color: var(--accent); }
 
 
-/* KeyFrames */
+
+/* -----KeyFrames----- */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(18px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -1199,6 +1200,11 @@ footer {
 @keyframes blink {
   0%,100% { opacity: 1; transform: scale(1); }
   50%      { opacity: .35; transform: scale(.6); }
+}
+
+@keyframes barFill {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
 }
 
 @keyframes spin { to { transform: rotate(360deg); } }
@@ -1230,4 +1236,102 @@ footer {
   100% { transform: translateY(-50%); }
 }
 
+
+
+/* -----Responsive Page----- */
+@media (max-width: 900px) {
+  nav { padding: 0 1.5rem; }
+  .nav-hamburger {
+    display: flex;
+  }
+  .nav-links{
+    display: none;
+    position: fixed;
+    top: var(--nav-h); left: 0; right: 0;
+    flex-direction: column;
+    gap: 0;
+    background-color: rgba(10,10,15,.97);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-links li{
+    width: 100%;
+  }
+  .nav-links a{
+    display: block;
+    padding: 0.9rem 2rem;
+    font-size: 0.8rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-links::after{
+    display: none;
+  }
+
+  /* show menu when checkbox checked */
+  #nav-toggle:checked ~ nav .nav-links{
+    display: flex;
+  }
+
+  .hero-wrap{
+    grid-template-columns: 1fr;
+    padding: calc(var(--nav-h) + 2rem) 1.5rem 2rem;
+    grid: 2.5rem;
+  }
+  .hero-left{
+    align-items: center;
+  }
+  .hero-right{
+    order: -1;
+  }
+  .hero-photo-stage{
+    width: 240px;
+    height: 300px;
+    margin: 0 auto;
+  }
+  .ft-1, .ft-2, .ft-3{
+    display: none;
+  }
+
+  .ft-4{
+  top: 95%; left: 10%;
+  background: rgba(255,184,106, 0.30);
+
+  }
+
+  .section-wrap{
+    padding: 4.5 1.rem;
+  }
+  .about-layout{
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .about-stats{
+    grid-template-columns: 1fr 1fr;
+  }
+  .skills-layout, .contact-layout, .comp-grid{
+    grid-template-columns: 1fr;
+  }
+  .resume-card{
+    flex-direction: column;
+  }
+  footer{
+    padding: 2rem 1.5rem;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 480px){
+  .hero-name{
+    font-size: clamp(2.5rem, 14vw, 4rem);
+  }
+
+  .about-stats{
+    grid-template-columns: 1fr;
+  }
+
+  .hero-cta{
+    flex-direction: column;
+  }
+}
 
